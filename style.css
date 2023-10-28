@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap');
+
+*{
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    
+    overflow-x: hidden;
+    padding-left: 34rem;
+    color: aliceblue;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background: #00172D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    color: aliceblue;
+}
+
+header .user img{
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: .7rem solid #333;
+    margin-top: 1rem;
+    
+}
+
+header .user .name{
+    font-size: 3.5rem;
+    
+}
+
+header .user p{
+    font-size: 2rem;
+}
+
+header .navbar {
+    width: 100%;
+}
+
+header .navbar ul{
+    list-style: none;
+    padding: 1rem 3rem;
+
+}
+
+header .navbar ul li a{
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: #331D2C;
+    color: aliceblue;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+}
+
+header .navbar ul li a:hover{
+    background: aliceblue;
+    color: #111;
+}
+
+#menu{
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: #333;
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+
+section{
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 15rem;
+    background-image: linear-gradient(147deg, #000000 0%, #923cb5 300%);
+}
+
+.home h3{
+    font-size: 3.5rem;
+
+}
+
+.home h1 {
+    font-size: 5rem;
+    padding: 1.5rem;
+}
+
+
+.home p{
+    font-size: 2rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
+}
+
+.home span{
+    color: deepskyblue;
+}
+
+.btn{
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #331D2C;
+    color: aliceblue;
+    border: aliceblue 0.7px solid;
+    margin-top: 1.2rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.home .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    
+}
+
+.btn:hover{
+    background-color: aliceblue;
+    color: #111;
+}
+
+
+.about{
+    background-image: linear-gradient(147deg, #000000 0%, #923cb5 300%);
+}
+
+
+.heading{
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: 1rem solid #331D2C;
+}
+
+.heading span{
+    color: deepskyblue;
+}
+
+
+.about .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+.about .row .info{
+    flex: 1 1 48rem;
+    padding: 2rem 1rem;
+    padding-left: 6rem;
+}
+
+.about .row .info h3{
+    font-size: 2rem;
+    color: deepskyblue;
+    padding: 1rem 0;
+    font-weight: normal;
+}
+
+.about .row .info h3 span{
+    color: aliceblue;
+    padding: 0 .5rem;
+}
+
+.about .row .counter{
+    flex: 1 1 48rem;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+
+.about .row .counter .box{
+    width: 20rem;
+    background: #331D2C;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: .7rem;
+}
+
+.about .row .counter .box span{
+    font-size: 4rem;
+    color: deepskyblue;
+
+}
+
+.about .row .counter .box h3{
+    font-size: 1.5rem;
+    color: aliceblue;
+    
+}
+
+
+.education{
+    background-image: linear-gradient(147deg, #000000 0%, #923cb5 300%);
+}
+
+.education .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    padding-left: 3rem;
+    
+
+}
+
+.education .box-container .box{
+    width: 60%;
+    margin: 4rem 1rem;
+    padding: 2rem 2rem 2rem 4rem;
+    border-left: 1rem solid deepskyblue;
+    position: relative;
+    background: #331D2C;
+}
+
+.education .box-container .box .year{
+    font-size: 1.3rem;
+    background-color: #00172D;
+    color: aliceblue;
+    padding: 0.5rem 1.2rem 0.5rem 1.2rem;
+    border: .1rem deepskyblue solid;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.education .box-container .box i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.education .box-container .box h3 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.education .box-container .box p{
+    font-size: 1.3rem;
+    flex-wrap: wrap;
+}
+
+.education .box-container .box .school{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: deepskyblue;
+}
+
+
+.projects{
+    background-image: linear-gradient(147deg, #000000 0%, #923cb5 300%);
+}
+
+
+.projects .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+
+.projects .box-container .box{
+    height: 20rem;
+    width: 26rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+
+.projects .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.projects .box-container .box:hover img{
+    transform: scale(1.2);
+}
+
+
+.contact{
+    background-image: linear-gradient(147deg, #000000 0%, #923cb5 300%);
+}
+
+
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.contact .row .content{
+    flex: 1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 10rem;
+}
+
+.contact .row .content .title{
+    font-size: 2.5rem;
+    color: deepskyblue;
+    padding: 1rem;
+}
+
+
+.contact .row .content .info h3{
+    padding: 0.6rem;
+    text-transform: none;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.contact .row .content .info i{
+    padding-right: 1rem;
+}
+
+.contact .row form{
+    flex: 1 1 45rem;
+    padding: 1rem;
+    margin: 2rem;
+    margin-bottom: 4rem;
+    
+}
+
+
+
+.contact .row form .box{
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background: #331D2C;
+    color: aliceblue;
+    text-transform: none;
+    font-size: 1.7rem;
+    width: 100%;
+    border-radius: .6rem;
+}
+
+
+.contact .content .user img{
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: .7rem solid #333;
+    margin-top: 1rem;
+    
+}
+
+.contact .user .name{
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding-left: 1rem;
+    
+}
+
+.contact .user p{
+    font-size: 1.5rem;
+    padding-left: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+/*media queries*/
+
+@media (max-width:1200px){
+    html{
+        font-size: 55%;
+        
+    }
+
+    .home{
+        padding: 1rem 4rem;
+    }
+}
+
+
+@media (max-width:991px){
+    header{
+        left: -150%;
+    }
+
+    body{
+        padding: 0;
+    }
+
+    #menu{
+        display: block;
+    }
+
+    header.toggle{
+        left: 0;
+        
+    }
+
+    
+}
+
+
+@media (max-width:768px){
+    html{
+        font-size: 50%;
+    }
+    
+}
+
+
+@media (max-width:400px){
+    header{
+        width: 100vw;
+    }
+
+    .heading{
+        margin: 0 3rem;
+    }
+
+    .about .row .counter .box{
+        width: 100%;
+    }
+
+    .education .box-container .box{
+        width: 100%;
+        margin-right: 3rem;
+    }
+
+    .projects .box-container .box{
+        width: 100%;
+    }
+
+    
+}

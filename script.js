@@ -10,35 +10,31 @@ $(document).ready(function(){
     });
 })
 
+$(document).ready(function() {
+    // Data for each popup
+    const popupData = {
+        "experience": "Detailed information about your experience.",
+        "projects": "Detailed information about your projects.",
+        "certifications": "Detailed information about your licenses and certifications.",
+        "skills": "Detailed information about your web development skills.",
+        "intern": "Detailed information about your remote internships.",
+        "video-editing": "Detailed information about your video editing experience."
+    };
 
+    // Event listener for show more buttons
+    $(".box .btn").on("click", function() {
+        const buttonId = $(this).attr("id");
+        $("#popup-data").html(popupData[buttonId]);
+        $("#popup-overlay").fadeIn();
+    });
 
-let showLoginButton = document.getElementById('showLogin' , 'edu');
-        const overlay = document.getElementById('overlay');
-        const loginContainer = document.getElementById('loginContainer');
-        const closeLoginButton = document.getElementById('closeLogin');
+    // Close popup
+    $(".close-btn, #popup-overlay").on("click", function() {
+        $("#popup-overlay").fadeOut();
+    });
 
-        showLoginButton.addEventListener('click', () => {
-            overlay.style.display = 'flex';
-            loginContainer.style.display = 'block';
-            loginContainer.shop.display = 'block';
-        });
-
-        closeLoginButton.addEventListener('click', () => {
-            overlay.style.display = 'none';
-            loginContainer.style.display = 'none';
-            loginContainer.shop.display = 'block';
-        });
-
-
-
-        document.addEventListener("DOMContentLoaded", function() {
-            const skills = ["HTML", "CSS", "JavaScript", "Python", "React", "Node.js"];
-            const skillList = document.getElementById("skill-list");
-      
-            skills.forEach(skill => {
-              const li = document.createElement("li");
-              li.className = "skill-item";
-              li.innerHTML = `<span>${skill}</span>`;
-              skillList.appendChild(li);
-            });
-          });
+    // Prevent closing popup when clicking inside the content area
+    $(".popup-content").on("click", function(e) {
+        e.stopPropagation();
+    });
+});

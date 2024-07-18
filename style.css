@@ -20,7 +20,7 @@ html{
 body{
     
     overflow-x: hidden;
-    padding-left: 34rem;
+    padding-left: 32rem;
     color: aliceblue;
 }
 
@@ -31,7 +31,7 @@ header {
     left: 0;
     z-index: 1000;
     height: 100%;
-    width: 35rem;
+    width: 33rem;
     background: #00172D;
     display: flex;
     align-items: center;
@@ -42,18 +42,17 @@ header {
 }
 
 header .user img{
-    height: 15rem;
-    width: 15rem;
+    height: 14rem;
+    width: 14rem;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 1rem;
-    border: .7rem solid #333;
+    border: .5rem solid #333;
     margin-top: 1rem;
     
 }
 
 header .user .name{
-    font-size: 3.5rem;
+    font-size: 3rem;
     
 }
 
@@ -239,72 +238,72 @@ section{
     
 }
 
-
-/*login page*/
-
-
-
-.card {
-    background-color: #331D2C;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    width: 300px;
-    text-align: center;
-    display: none; /* Initially hidden */
-}
-
-.card h2 {
-    margin-bottom: 20px;
-    font-size: 25px;
-}
-
-.card input[type="text"],
-.card input[type="password"] {
+.goto{
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-top: 10px
 }
 
-.card input[type="submit"] {
-    background-color: #eee;
-    color: #130f40;
+.goto .btn{
+    background: none;
     border: none;
-    border-radius: 3px;
-    padding: 10px 20px;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    text-decoration: underline;
+    font-size: 1.3rem;
+}  
+
+.goto .btn:hover{
+    color: deepskyblue;
 }
 
-.card input[type="submit"]:hover {
-    background-color: var(--green);
-    color: #fff;
+.home .goto .btn{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
 
-/* Overlay for the pop-up */
+
 .overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none; /* Initially hidden */
+    background: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
+    z-index: 1000;
+    transition: 5s linear ease-in-out;
 }
 
-.skill-list{
+.popup-content {
+    background: #333;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    height: 50%;
+    max-width: 500px;
+    text-align: center;
+    color: deepskyblue;
+    font-size: 1.5rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
-    font-size: 20px;
-    text-align: left;
 }
+
+.close-btn {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 5rem;
+    cursor: pointer;
+}
+
 
 
 
@@ -572,7 +571,7 @@ section{
 }
 
 
-@media (max-width:400px){
+@media (max-width:430px){
     header{
         width: 100vw;
     }
@@ -594,5 +593,10 @@ section{
         width: 100%;
     }
 
+    .popup-content{
+        width: 80%;
+        height: auto;
+        min-height: 300px;
+    }
     
 }

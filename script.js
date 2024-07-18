@@ -38,3 +38,21 @@ $(document).ready(function() {
         e.stopPropagation();
     });
 });
+
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = document.querySelector('input[name="name"]').value;
+    const email = document.querySelector('input[name="email"]').value;
+    const project = document.querySelector('input[name="project"]').value;
+    const message = document.querySelector('textarea[name="message"]').value;
+
+    const whatsappMessage = `Name: ${name}\nEmail: ${email}\nProject: ${project}\nMessage: ${message}`;
+    const whatsappLink = `https://wa.me/919609887167?text=${encodeURIComponent(whatsappMessage)}`;
+
+    const whatsappAnchor = document.getElementById('whatsapp-link');
+    whatsappAnchor.href = whatsappLink;
+    whatsappAnchor.style.display = 'block';
+    whatsappAnchor.click();
+});
